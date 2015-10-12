@@ -131,5 +131,10 @@ public class WebController {
 		modelAndView.addObject("users", listAllUsers());
 		return modelAndView;
 	}
+	
+	//method test for assingment 3
+	public static string stringTest() {
+		return "test";
+	}
 
 }
