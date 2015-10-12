@@ -136,5 +136,10 @@ public class WebController {
 	public static string stringTest() {
 		return "test";
 	}
-
+	//Juan Gonzalez test for assignment 3
+	
+	public static int testInt(){
+		return 42;
+	}
+	
 }
