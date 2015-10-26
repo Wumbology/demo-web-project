@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.google.common.math.intMath;
+
 import edu.csupomona.cs480.App;
 import edu.csupomona.cs480.data.User;
 import edu.csupomona.cs480.data.provider.UserManager;
@@ -131,8 +133,17 @@ public class WebController {
 		modelAndView.addObject("users", listAllUsers());
 		return modelAndView;
 	}
-	
+	//method for assignment 5 Juan Gonzalez
+	@RequestMapping(value = "/cs480/testMath", method = RequestMethod.GET)
+	public static int testMath(int a,int b){
+		intMath math = new intMathc();
+		int tester = math.gcd(a,b);
+		tester = math.factorial(tester);
+		return tester;
+		
+	}
 	//method test for assingment 3
+	
 	public static string stringTest() {
 		return "test";
 	}
