@@ -1,6 +1,10 @@
 package edu.csupomona.cs480.controller;
 
+import java.io.File;
 import java.util.List;
+
+
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,6 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.google.common.math.intMath;
+
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.LineIterator;
 
 import edu.csupomona.cs480.App;
 import edu.csupomona.cs480.data.User;
@@ -142,6 +149,23 @@ public class WebController {
 		return tester;
 		
 	}
+	
+	//method for assignment 5 Jonathan Francisco
+	public static int iterateLine(File file) {
+		 LineIterator it = FileUtils.lineIterator(file, "UTF-8");
+		 int count = 0;
+		 try {
+		   while (it.hasNext()) {
+		     String line = it.nextLine();
+		     count++;
+		   }
+		 } finally {
+		   it.close();
+		 }
+		 return count;
+		 
+	}
+	
 	//method test for assingment 3
 	
 	public static string stringTest() {
