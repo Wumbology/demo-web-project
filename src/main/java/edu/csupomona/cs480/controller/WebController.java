@@ -1,6 +1,7 @@
 package edu.csupomona.cs480.controller;
 
 import java.io.File;
+
 import java.util.List;
 
 
@@ -168,7 +169,7 @@ public class WebController {
 	
 	//method test for assingment 3
 	
-	public static string stringTest() {
+	public static String stringTest() {
 		return "test";
 	}
 	//Juan Gonzalez test for assignment 3
