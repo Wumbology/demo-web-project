@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.google.common.math.intMath;
+//import com.google.common.math.intMath;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.LineIterator;
@@ -141,7 +141,7 @@ public class WebController {
 		modelAndView.addObject("users", listAllUsers());
 		return modelAndView;
 	}
-	//method for assignment 5 Juan Gonzalez
+	/*//method for assignment 5 Juan Gonzalez
 	@RequestMapping(value = "/cs480/testMath", method = RequestMethod.GET)
 	public static int testMath(int a,int b){
 		intMath math = new intMathc();
@@ -149,10 +149,10 @@ public class WebController {
 		tester = math.factorial(tester);
 		return tester;
 		
-	}
+	}*/
 	
-	//method for assignment 5 Jonathan Francisco
-	public static int iterateLine(File file) {
+	/*//method for assignment 5 Jonathan Francisco
+	public static int iterateLine(File file)throws Exception {
 		 LineIterator it = FileUtils.lineIterator(file, "UTF-8");
 		 int count = 0;
 		 try {
@@ -165,7 +165,7 @@ public class WebController {
 		 }
 		 return count;
 		 
-	}
+	}*/
 	
 	//method test for assingment 3
 	
