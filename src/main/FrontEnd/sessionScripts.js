@@ -7,15 +7,52 @@ ctx.canvas.width = window.innerWidth;
 ctx.canvas.height = window.innerHeight;
 
 
+var brushSize = 5;	//get this from a setting
 
-function myFunction(event)
+var border = 5;
+
+var _mouseDown = false;
+
+function mouseClick(event)
 {
-	var border = 5;
-	var x = event.pageX - c.offsetLeft - 5;
-	var y = event.pageY - c.offsetTop - 5;
+	draw(calcX(event.pageX), calcY(event.pageY), brushSize);
+}
+
+function mouseDown(event)
+{
+	_mouseDown = true;
+	draw(calcX(event.pageX), calcY(event.pageY), brushSize);
+}
+
+function mouseUp(event)
+{
+	_mouseDown = false;
+}
+
+function mouseMove(event)
+{
+	if (_mouseDown)
+	{
+		draw(calcX(event.pageX), calcY(event.pageY), brushSize);
+	}
+}
+
+function draw(x, y, size)
+{
 	
 	ctx.beginPath();
-	ctx.arc(x, y, 1, 0, 2 * Math.PI);
-	//need to map event coordinates to canvas coordinates
+	ctx.arc(x, y, size, 0, 2 * Math.PI);
+	ctx.fillStyle = 'black';	//get this from a setting
+	ctx.fill();
 	ctx.stroke();
+}
+
+function calcX(rawX)
+{
+	return rawX - c.offsetLeft - border;
+}
+
+function calcY(rawY)
+{
+	return rawY - c.offsetTop - border;
 }
