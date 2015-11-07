@@ -6,8 +6,13 @@
 		
 	</head>
 	
-	<body>
-		<canvas id="myCanvas" onClick="myFunction(event)">
+	<body id="myBody">
+		<form>
+			Brush size:
+			<input type="range" id="brushSize" min="1" max="20" step="1" value="0" onChange="changeBrushSize(this.value)">
+		</form>
+		<canvas id="myCanvas" onClick="mouseClick(event)" onmousedown="mouseDown(event)"
+				onmouseup="mouseUp(event)" onmousemove="mouseMove(event)">
 		</canvas>
 		
 		<script src="sessionScripts.js"></script>
