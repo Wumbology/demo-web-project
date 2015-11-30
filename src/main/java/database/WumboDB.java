@@ -11,7 +11,7 @@ public class WumboDB {
 	 static final String USER = "wumbology";
 	 static final String PASS = "loyalty1";
 	 
-	 public static void addUser(String username, String password) {
+	 public static void addUser(String username, String password, String salt) {
 	 Connection conn = null;
 	 Statement stmt = null;
 	 try{
@@ -33,7 +33,7 @@ public class WumboDB {
 	    stmt = conn.createStatement();
 	    
 	    String sql = "INSERT INTO User " +
-                "VALUES ('" + username + "', '" + password + "')";
+                "VALUES ('" + username + "', '" + password + "', '" + salt + "');";
 	    stmt.executeUpdate(sql);
 	    System.out.println("Inserted records into the table...");
 
