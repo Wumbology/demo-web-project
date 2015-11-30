@@ -141,41 +141,5 @@ public class WebController {
 		modelAndView.addObject("users", listAllUsers());
 		return modelAndView;
 	}
-	/*//method for assignment 5 Juan Gonzalez
-	@RequestMapping(value = "/cs480/testMath", method = RequestMethod.GET)
-	public static int testMath(int a,int b){
-		intMath math = new intMathc();
-		int tester = math.gcd(a,b);
-		tester = math.factorial(tester);
-		return tester;
-		
-	}*/
-	
-	/*//method for assignment 5 Jonathan Francisco
-	public static int iterateLine(File file)throws Exception {
-		 LineIterator it = FileUtils.lineIterator(file, "UTF-8");
-		 int count = 0;
-		 try {
-		   while (it.hasNext()) {
-		     String line = it.nextLine();
-		     count++;
-		   }
-		 } finally {
-		   it.close();
-		 }
-		 return count;
-		 
-	}*/
-	
-	//method test for assingment 3
-	
-	public static String stringTest() {
-		return "test";
-	}
-	//Juan Gonzalez test for assignment 3
-	
-	public static int testInt(){
-		return 42;
-	}
 	
 }
