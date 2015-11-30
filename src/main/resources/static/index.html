@@ -1,13 +1,29 @@
 <html>
 	<!-- This page will be shown when you git the root URL -->
 	<head>
-	    <title>CS480 Demo HomePage</title>
 	    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	    <script src="/js/home-control.js"></script>
+    	<title>Login</title>
+    	<link  rel="stylesheet" href="login.css"  />
 	</head>
 
-	<body onload="healthCheck();">
-		Demo Project is running: <label id="status"></label>
+	<body>
+    <!-- Begin Page Content -->
+    <div id="container">
+        <form action  =".../Session.html">
+            <label for="username">Email:</label>
+            <input type="text" id="username" name="username">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <div id="lower">
+                <input type="checkbox"><label class="check" for="checkbox">Keep me logged in</label>
+                <button id="signIn" type="submit" class="btn btn-success btn-md" >Sign in</button>
+                <!--THIS LINK NEEDS TO BE CHANGED AT SOME POINT IT WILL NOT WORK -->
+            	Not Registered? <a href="file:///C:/Users/juan/git/demo-web-project/src/main/FrontEnd/Registration.html" data-toggle="modal">Register here</a></div>
+            </div><!--/ lower-->
+        </form>
+    </div><!--/ container-->
+   <!-- End Page Content -->
 	</body>
 
 </html>
