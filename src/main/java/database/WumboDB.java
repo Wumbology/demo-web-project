@@ -24,6 +24,11 @@ public class WumboDB {
 	    System.out.println("Connected database successfully...");
 	    
 	    //STEP 4: Execute a query
+	    String queryCheck = "SELECT * from User WHERE username = '" + username + "';";
+	    ResultSet rs = stmt.executeQuery(queryCheck);
+	    if (rs.next()) {
+	    	System.out.println("username already exists");
+	    }
 	    System.out.println("Inserting records into the table...");
 	    stmt = conn.createStatement();
 	    
