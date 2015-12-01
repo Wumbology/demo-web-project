@@ -4,7 +4,7 @@ $host="wumbo-db-instance.cw661l5aptwb.us-west-2.rds.amazonaws.com:3306/wumboidea
 $username="wumbology"; // Mysql username 
 $password="loyalty1"; // Mysql password 
 $db_name="wumboideas_database"; // Database name 
-$tbl_name="members"; // Table name 
+$tbl_name="Users"; // Table name 
 
 // Connect to server and select databse.
 mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
