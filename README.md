@@ -1,36 +1,28 @@
-Overview
---------
+Wumbo Ideas
+-----------
+Creators:
+Jonathan Francisco, Juan Gonzalez, Anthony Watanabe
 
-The skeleton of the demo web project for CS480.
+Services used:
+Used Maven to package our project together, Amazon Web Service (AWS) servers to deploy,
+Amazon Relation Database System (RDS) for the database, Jenkins to update and deploy pushed code, and
+Github to share code. 
 
-This project is designed to let you practice the different aspects of software engineering, such as version control, design, tests, build, deployment, and maintenance.
+Overview: 
+Wumbo Ideas was created in response to the growing problem of lack of collaboration. The idea stemmed 
+from groups being able to meet togethor and come up with ideas on a whiteboard. 
 
-Environment Setup
------------------
+Implementation:
+What we did was created a virtual whiteboard that users can use to collaborate their different ideas for their
+different groups. We also added a todo list for users to manage their invdividual tasks that they have 
+complete. A database holds the accounts for each user, and the accounts are tied to the users email accounts.
 
-1. Install the latests Maven (http://maven.apache.org/download.cgi)
-2. Install the Eclipse 4+ (http://www.eclipse.org/)
-3. Install the Maven Eclipse Plug-in using the update site (http://www.eclipse.org/m2e/download/)
+How to use:
+First type wumboideas.space into your web browser. 
+In the login page, sign into your account (if you don't have an account click Register account).
+Once signed in you will see a whiteboard that you can edit with a to do list under. 
+Then Collaborate, innovate, and come up with bigger and better ideas to push the boundaries of tech!
 
-Importing the Project into Eclipse
-----------------------------------
-
-1. File->Import->Maven->Existing Maven Projects
-2. Select the directory containing the pom.xml file
-3. Finish
-
-Building the Project for the First Time
----------------------------------------
-1. Right-click on the project root folder->Maven->Update Project
-
-Running the Project Locally
-----------------------------------------
-1. Locate the App.java in src/main/java source folder and right-click on it->Run As->Java Application
-2. Verify the running process in your web browser by the following URLs:
-
-- http://localhost:8080/
-- http://localhost:8080/cs480/ping
-- http://localhost:8080/cs480/home
-
-//Test change to test webook
-//Test to see if Jenkins works
+-------------------
+Thank you for using Wumbo Ideas! If you have any suggetions we would love to here them! This is an ongoing
+project that we will continue to update to look and feel better to use so stay tuned!
